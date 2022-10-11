@@ -36,6 +36,11 @@ export class AppComponent {
     someArray[1].func();
   }
 
+  stillNotAFunctionError() {
+    var someArray = [{ func: function () {} }];
+    someArray[1].func();
+  }
+
   uriError() {
     decodeURIComponent("%");
   }
