@@ -1,16 +1,16 @@
-import { BrowserModule } from '@angular/platform-browser';
-import {APP_INITIALIZER, ErrorHandler, NgModule} from "@angular/core";
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { BrowserModule } from "@angular/platform-browser";
+import { APP_INITIALIZER, ErrorHandler, NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
 import { Router, RouterModule } from "@angular/router";
-import { AppComponent } from './app.component';
-import { environment } from './../environments/environment.prod';
+import { AppComponent } from "./app.component";
+import { environment } from "./../environments/environment.prod";
 
 import * as Sentry from "@sentry/angular";
 import { Integrations } from "@sentry/tracing";
 
 Sentry.init({
-  dsn: "https://e117778702c244d1af1afabd3b786566@o477548.ingest.sentry.io/5518792",
+  dsn: "https://0564a892e4c142d4a38b86a269364876@o1420641.ingest.sentry.io/6766416",
   release: environment.release,
   integrations: [
     new Integrations.BrowserTracing({
@@ -26,9 +26,12 @@ Sentry.init({
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, FormsModule, HttpClientModule, RouterModule.forRoot([
-          { path: '', component: AppComponent },
-  ])],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    RouterModule.forRoot([{ path: "", component: AppComponent }]),
+  ],
   providers: [
     {
       provide: ErrorHandler,

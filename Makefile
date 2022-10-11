@@ -2,8 +2,8 @@
 # Following variable must be passed in
 #  SENTRY_AUTH_TOKEN
 
-SENTRY_ORG=mycompany1
-SENTRY_PROJECT=mycompany1
+SENTRY_ORG=touchfoundry-t6
+SENTRY_PROJECT=ng-conf
 PREFIX=dist
 SENTRY_CLI=./node_modules/.bin/sentry-cli
 VERSION=`$(SENTRY_CLI) releases propose-version`

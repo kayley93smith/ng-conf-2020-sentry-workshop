@@ -8,15 +8,32 @@
     <div class="center">
       <form>
         <div class="form-group">
-          <input type="text" [(ngModel)]="textValue" type="email" class="form-control" [ngModelOptions]="{standalone: true}" placeholder="Enter email">
+          <input
+            type="text"
+            [(ngModel)]="textValue"
+            type="email"
+            class="form-control"
+            [ngModelOptions]="{ standalone: true }"
+            placeholder="Enter email"
+          />
         </div>
-        <button type="submit" (click)="this.handleSubmit()" class="btn btn-primary">Submit</button>
+        <button
+          type="submit"
+          (click)="this.handleSubmit()"
+          class="btn btn-primary"
+        >
+          Submit
+        </button>
       </form>
     </div>
 
-    <h2>Hi {{currentUser ? currentUser : "Guest"}}</h2>
+    <h2>Hi {{ currentUser ? currentUser : "Guest" }}</h2>
 
-    <ul class="center list-group" [ngStyle]="{ 'color': color }" (click)="this.changeColor()">
+    <ul
+      class="center list-group"
+      [ngStyle]="{ color: color }"
+      (click)="this.changeColor()"
+    >
       <li class="list-group-item list-group-item-danger">
         <h3>ERRORS</h3>
       </li>
@@ -26,8 +43,7 @@
       </li>
       <li class="list-group-item" (click)="this.uriError()">
         <h3>URIError</h3>
-        <p>URI malformed
-        </p>
+        <p>URI malformed</p>
       </li>
       <li class="list-group-item" (click)="this.syntaxError()">
         <h3>SyntaxError</h3>
@@ -37,8 +53,8 @@
         <h3>RangeError</h3>
         <p>Parameter must be between 1 and 100</p>
       </li>
-      li class="list-group-item" (click)="this.newrangeError()">
-        <h3>RangeError</h3>
+      <li class="list-group-item" (click)="this.newrangeError()">
+        <h3>NewRangeError</h3>
         <p>Parameter must be between 1 and 200</p>
       </li>
     </ul>
